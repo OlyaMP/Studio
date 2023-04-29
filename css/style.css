@@ -1,12 +1,108 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,500&display=swap');
+
 :root {
     --dark: #27104E;
     --primary: #75E8E7;
     --secondary: #9854CB;
-    --wite: #FBFBFB;
+    --gray: #FBFBFB;
 }
+
 body {
     font-family: 'Poppins', sans-serif;
     background-color: var(--secondary);
     color: var(--dark);
+    max-width: 1918px;
+}
+
+.container {
+    max-width: 1600px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+}
+
+/* Header */
+.header {
+    display: flex;
+    gap: 4.5vw;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+}
+
+.header__nav {
+    flex-grow: 1;
+    display: flex;
+    gap: 2.2vw;
+}
+
+.header__link {
+    text-decoration: none;
+    color: var(--gray);
+}
+
+.header__link:hover {
+    color: var(--primary);
+    cursor: pointer;
+    transition: .4s;
+}
+
+.header__btn {
+    border: none;
+    background-color: var(--secondary);
+    color: var(--gray);
+    padding: 16px 24px;
+    font-size: 18px;
+    line-height: 27px;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+/* Hero */
+.hero__info {
+    color: var(--gray);
+    font-size: 24px;
+    margin-top: 40px;
+}
+
+.hero__text {
+    line-height: 40px;
+    max-width: 784px;
+    margin: 0;
+}
+
+.hero__title {
+    max-width: 864px;
+    font-size: 64px;
+    line-height: 80px;
+    font-weight: 700;
+    color: var(--primary);
+    margin-top: 14px;
+    margin-bottom: 32px;
+}
+
+.hero__link {
+    color: var(--dark);
+    text-decoration: none;
+    background-color: var(--primary);
+    padding: 20px 77px 20px 21px;
+    position: relative;
+    display: inline-block;
+    margin-top: 56px;
+}
+
+.hero__link::after {
+    content: '';
+    display: block;
+    background-image: url(../img/arrow.svg);
+    background-size: cover;
+    width: 48px;
+    height: 48px;
+    position: absolute;
+    right: 21px;
+    top: calc(50% - 24px);
 }
